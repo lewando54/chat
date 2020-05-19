@@ -1,0 +1,399 @@
+body,html{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100vh;
+    background-color: rgb(51, 51, 51);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mobile{
+    visibility: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    max-height: 88%;
+}
+
+#rooms-main{
+    max-height: 85.7% !important;
+}
+
+.you{
+    color:rgb(255, 142, 142)
+}
+
+#msg-container{
+    overflow-x: hidden;
+    width: 100%;
+    flex-grow: 8;
+    max-width: 100%;
+    height: 87%;
+    max-height: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    box-shadow: inset 0 0 20px #292929;
+}
+
+img{
+    max-width: 30%;
+    margin-bottom: 20px;
+}
+
+a{
+    color: bisque;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.msg{
+    width: 95%;
+    max-width: 95%;
+    border-bottom: 2px solid gray;
+    color: white;
+}
+
+.menu{
+    text-decoration: none !important;
+    color: white;
+    transition: transform 0.2s, color 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px #292020;
+}
+
+.menu:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color:  rgb(255, 98, 50);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: rgb(80, 63, 63);
+    box-shadow: inset 0 0 20px #3a2d2d;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    margin-right: 20%;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 5px 5px 10px #292020;
+}
+
+nav>*{
+    white-space: nowrap;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+
+
+#room-container{
+    display: flex;
+    flex-grow: 8;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    box-shadow: inset 0 0 20px #292929;
+}
+
+#room-container>#send-form>input[type="text"]{
+    width: 50% !important;
+}
+
+.room-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 95%;
+    max-width: 95%;
+    border-bottom: 2px solid gray;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.room-box:hover{
+    background-color: #292929;
+}
+
+.room-box>a{
+    background-color: #584444;
+    padding: 10px;
+    color: bisque;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+    border: 2px solid bisque;
+    border-radius: 10px 0 10px 0;
+}
+
+.room-box>a:hover{
+    background-color: bisque;
+    color: #292929;
+}
+
+#room-form{
+    position: relative;
+    flex-grow: 1;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0 1% 0;
+    background-color: rgb(80, 63, 63);
+    box-shadow: inset 0 0 20px #3a2d2d;
+}
+
+#room-form>input[type="text"]{
+    width: 50%;
+    font-size: 200%;
+    background-color: rgb(63, 50, 50);
+    color: white;
+    border: 2px solid gray;
+    border-radius: 15px 0 15px 0;
+    transition: border 0.5s;
+    padding-left: 15px;
+}
+
+#room-form>input[type="text"]:focus{
+    outline:0;
+    border: 2px solid rgb(255, 142, 142);
+}
+
+#room-form>input[type="submit"]{
+    background-color: #584444;
+    padding: 10px;
+    color: bisque;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+    border: 2px solid bisque;
+    border-radius: 10px 0 10px 0;
+    margin-top: 20px;
+}
+
+
+#room-form>input[type="submit"]:hover{
+    background-color: bisque;
+    color: #292929;
+}
+
+#room-form>h2{
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 5px 5px 10px #292020;
+}
+
+#send-form{
+    position: relative;
+    flex-grow: 1;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2% 0 2% 0;
+    background-color: rgb(80, 63, 63);
+    box-shadow: inset 0 0 20px #3a2d2d;
+}
+
+#send-form>input[type="text"]{
+    width: 90%;
+    font-size: 200%;
+    background-color: rgb(63, 50, 50);
+    color: white;
+    border: 2px solid gray;
+    border-radius: 15px 0 0 15px;
+    transition: border 0.5s;
+    padding-left: 15px;
+}
+
+#send-form>input[type="submit"]{
+    padding: 12px 10px 12px 10px;
+    background-color: rgb(63, 50, 50);
+    border-radius: 0 15px 15px 0;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-left: 0;
+    transition: background-color 0.2s;
+    color: white; 
+}
+
+#send-form>input[type="submit"]:hover{
+    background-color: gray;
+}
+
+#send-form>input[type="submit"]:focus{
+    outline:0;
+}
+
+#send-form>input[type="text"]:focus{
+    outline:0;
+    border: 2px solid rgb(255, 142, 142);
+}
+
+.autor{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.broadcast{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.tresc:first-child{
+    margin-top: 0 !important;
+}
+
+.tresc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.wraptext{
+    max-width: 100%;
+    word-wrap:break-word !important;
+    display: block !important;
+}
+
+#login-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+label{
+    width: 85%;
+    text-align: left;
+}
+
+#login-form{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #584444;
+    border: 2px solid gray;
+    border-radius: 15px 0 15px 0;
+    padding: 30px;
+}
+
+#login-form>input:not([type="submit"]){
+    width: 90%;
+    font-size: 200%;
+    background-color: rgb(63, 50, 50);
+    color: white;
+    border: 2px solid gray;
+    border-radius: 15px 0 15px 0 ;
+    transition: border 0.5s;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+#login-form>input:not([type="submit"]):focus{
+    outline: 0;
+    border: 2px solid rgb(255, 142, 142);
+}
+
+#login-form>input[type="submit"]{
+    background-color: #584444;
+    padding: 10px;
+    color: bisque;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+    border: 2px solid bisque;
+    border-radius: 10px 0 10px 0;
+}
+
+#login-form>input[type="submit"]:hover{
+    background-color: bisque;
+    color: #292929;
+}
+
+#login-form>input[type="submit"]:focus{
+    outline: 0;
+}
+
+@media screen and (max-width: 1000px){
+    #send-form{
+        padding: 5% 0 5% 0;
+    }
+
+    #send-form>input[type="text"]{
+        width: 80%;
+    }
+
+    img{
+    max-width: 100%;
+    width: 100%;
+    }
+    #room-container{
+        flex-grow: 1;
+    }
+    .room-box{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape){
+    img{
+        max-width: 50%;
+        width: 50%;
+    }
+    h2{
+        font-size: medium;
+    }
+    #room-container{
+        flex-grow: 1;
+    }
+    #msg-container{
+        max-height: 100%;
+    }
+}

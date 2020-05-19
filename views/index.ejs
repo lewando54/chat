@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="http://192.168.0.28:80/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <meta name="theme-color" content="#000000" />
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Chat Lewando54</h1>
+        </section>
+        <nav>
+            <a href='/register' class="menu">Zarejestruj</a>
+            <a href='/login' class="menu">Zaloguj</a>
+        </nav>
+    </header>
+    <main id="rooms-main">
+        <div id="room-container">
+            <% Object.keys(rooms).forEach(room => { %>
+                <div class="room-box">
+                    <div>Pokój:
+                        <%= room %>
+                    </div>
+                    <a href="/<%= room %>">Dołącz</a>
+                </div>
+                <% }) %>
+        </div>
+        <form autocomplete="off" id="room-form" action="/room" method="POST">
+            <h2>Stwórz pokój</h2>
+            <input maxlength="31" required type="text" name="room">
+            <input type="submit" value="Nowy pokój">
+        </form>
+    </main>
+</body>
+
+</html>

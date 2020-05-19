@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="http://192.168.0.28:80/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <script>
+        const roomName = "<%= roomName %>"
+    </script>
+    <meta name="theme-color" content="#000000" />
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Pokój:
+                <%= roomName %>
+            </h1>
+        </section>
+        <nav>
+            <p class="menu">Coś tam</p>
+            <a href='/' class="menu">Wyjdź</a>
+        </nav>
+    </header>
+    <main>
+        <div id="msg-container">
+        </div>
+        <form autocomplete="off" id="send-form">
+            <input type="text" id="msg-input">
+            <input type="submit" value="Wyślij">
+        </form>
+    </main>
+</body>
+
+</html>
