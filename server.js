@@ -52,7 +52,7 @@ app.get('/:room', (req, res) => {
     res.render('room', { roomName: req.params.room })
 })
 
-server.listen(80)
+server.listen(process.env.PORT || 80)
 
 io.on('connection', socket => {
     socket.on('join-msg', (room, autor) => {
